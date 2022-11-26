@@ -1,0 +1,33 @@
+
+
+    {
+      "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+      "contentVersion": "1.0.0.0",
+      "apiProfile": "",
+      "parameters": {  },
+      "variables": {  },
+      "functions": [  ],
+      "resources": [ 
+        {
+          "type": "Microsoft.Resources/deploymentScripts",
+          "apiVersion": "2020-10-01",
+          "name": "myFirstDeploymentScript2dfgdf",
+          "location": "ukwest",
+          "kind": "AzurePowerShell",
+          "identity": {
+            "type": "UserAssigned",
+            "userAssignedIdentities": {
+              "/subscriptions/625b66d7-5b11-40fb-99ab-ba303c13ea88/resourcegroups/dev_deployment_data/providers/Microsoft.ManagedIdentity/userAssignedIdentities/jsondeplopy"
+         : {} }
+          },
+          "properties": {
+            "azPowerShellVersion": "3.0",
+            "scriptContent": "terraform init",
+            "retentionInterval": "P1D"
+          }
+        }
+    
+       ],
+      "outputs": {  }
+    }
+    
